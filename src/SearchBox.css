@@ -1,0 +1,9 @@
+.search-box > input {
+    border:none;
+    border-radius: 20px;
+    text-align: center;
+}
+
+input:focus {
+  outline: none;
+}

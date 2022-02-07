@@ -1,0 +1,15 @@
+.app{
+    text-align: center;
+}
+.header{
+    margin:0%;
+    background :rgb(28, 36, 44);
+    padding: 1em;
+}
+.heading{
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to left,rgb(30, 255, 0), rgb(0, 225, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
