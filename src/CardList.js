@@ -8,7 +8,7 @@ const CardList = (props) => {
         <div className="card-list">
             {
                 props.robotList.map((robot,i) =>{
-                    return(
+                     return(
                         <Cards id={robot.id} name={robot.name} email={robot.email} />
                     )
                 })

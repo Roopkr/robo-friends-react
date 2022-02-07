@@ -5,10 +5,55 @@
     margin:0%;
     background :rgb(28, 36, 44);
     padding: 1em;
+    animation: 0.5s ease-out 0s 1 slideInFromLeft;
 }
-.heading{
+.heading,.footer h4{
     font-family: 'Press Start 2P', cursive;
     background: linear-gradient(to left,rgb(30, 255, 0), rgb(0, 225, 255));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+ 
+}
+.footer{
+    background: rgb(28, 36, 44);
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    padding: 0px;
+    animation: 0.5s ease-out 0s 1 slideInFromRight;
+}
+@keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(200%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+.no-result{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;   
+    font-family: 'Press Start 2P', cursive;
+    background: linear-gradient(to left,rgb(255, 0, 0), rgb(229, 255, 0));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
