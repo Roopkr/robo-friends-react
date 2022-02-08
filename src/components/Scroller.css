@@ -1,12 +1,12 @@
 .scroller::-webkit-scrollbar {
     width: 1em;
   }
-   
-  .scroller::-webkit-scrollbar-track {
+
+.scroller::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
-   
-  .scroller::-webkit-scrollbar-thumb {
+  
+.scroller::-webkit-scrollbar-thumb {
     background: linear-gradient(rgb(0, 225, 255),rgb(30, 255, 0));
     border-radius: 2em;
     outline: 1px solid slategrey;

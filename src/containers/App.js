@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import CardList from "./CardList";
 import "./App.css";
-import SearchBox from "./SearchBox";
-import Spinner from "./Spinner";
-import Scroller from "./Scroller";
+import CardList from "../components/CardList";
+import SearchBox from "../components/SearchBox";
+import Spinner from "../components/Spinner";
+import Scroller from "../components/Scroller";
+import ErrorBoundary from "../components/ErrorBoundary";
 class App extends Component {
   constructor() {
     super();
@@ -27,28 +28,20 @@ class App extends Component {
         .toLowerCase()
         .includes(this.state.searchField.toLowerCase());
     });
-    return !this.state.robotsList.length ? (
+    return  (
       <div className="app">
         <div className="header">
           <h1 className="heading">ROBO FRIENDS</h1>
           <SearchBox searchResult={this.searchResult} />
         </div>
-        <div className="spinner">
+        {!this.state.robotsList.length?( <div className="spinner">
           <Spinner />
-        </div>
-        <div className="footer">
-          <h4>Simple React App</h4>
-        </div>
-      </div>
-    ) : (
-      <div className="app">
-        <div className="header">
-          <h1 className="heading">ROBO FRIENDS</h1>
-          <SearchBox searchResult={this.searchResult} />
-        </div>
-        {resultRobotList.length ? (
+        </div>):
+        resultRobotList.length ? (
           <Scroller>
+              <ErrorBoundary>
             <CardList robotList={resultRobotList} />
+              </ErrorBoundary>
           </Scroller>
         ) : (
           <div className="no-result"><h1>No Results Found</h1></div>
